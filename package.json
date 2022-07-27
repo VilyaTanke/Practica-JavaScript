@@ -1,0 +1,27 @@
+{
+  "name": "XIII-Intro-JS",
+  "version": "1.0.0",
+  "description": "En este curso aprendermos a trabajar con JavaScript como lenguaje de programación.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://jbaysi@github.com/KeepCodingWeb13/intro-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KeepCodingWeb13/intro-js/issues"
+  },
+  "homepage": "https://github.com/KeepCodingWeb13/intro-js#readme",
+  "type": "module",
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}
