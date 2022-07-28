@@ -43,34 +43,12 @@ console.log('')
 
 var semifinalistas = []
 
-// function ronda(ronda, equipo1, equipo2){
-//     var golesA = selectChamp.getRandomInt(10);
-//     var golesB = selectChamp.getRandomInt(10);
-//     console.log('')
-//     console.log(`|-${equipo1} : ${golesA} Goles :: ${equipo2} : ${golesB} Goles -|`);
-//     console.log('')
-//     if ( golesA > golesB ) {
-//         console.log(`└======> Gana el Round ${ronda} ${equipo1} con: ${golesA} Goles
-//         `)
-//         semifinalistas.push(equipo1);
-//       } else {
-//         console.log(`└======> Gana el Round ${ronda} ${equipo2} con: ${golesB} Goles
-//         `)
-//         semifinalistas.push(equipo2);    
-//       }
-
-// }
     const playS = new playOff();
     playS.ronda(1, champA, subB, semifinalistas);
     playS.ronda(2, champB, subC, semifinalistas);
     playS.ronda(3, champC, subD, semifinalistas);
     playS.ronda(4, champD, subA, semifinalistas);
 
-
-    // ronda(1, champA, subB);
-    // ronda(2, champB, subC);
-    // ronda(3, champC, subD);
-    // ronda(4, champD, subA);
 
 console.log('')
 console.log('============================= SEMIFINALES ===============================')
