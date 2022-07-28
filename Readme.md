@@ -1,4 +1,4 @@
-# PRACTICA - HTML - CSS
+# PRACTICA - INTRODUCCIÓN - JAVASCRIPT
 
 [![GitHub-Angel](./Imagenes/gitangel.png)](https://github.com/VilyaTanke)
 
@@ -6,7 +6,7 @@
 
 
 
-[![GitHub version](https://badge.fury.io/gh/VilyaTanke%2FPractica-JS.svg)](https://badge.fury.io/gh/VilyaTanke%2FPractica-JS)    [![JS-dev](https://img.shields.io/badge/JS-%3C-------------blue)](https://badge.fury.io/gh/VilyaTanke%2FPractica-JS) [![JS-dev](https://img.shields.io/badge/~~~~%3E-JS-red)](https://badge.fury.io/gh/VilyaTanke%2FPractica-JS)
+   [![JS-dev](https://img.shields.io/badge/JS-%3C-------------blue)](https://badge.fury.io/gh/VilyaTanke%2FPractica-JS) [![JS-dev](https://img.shields.io/badge/~~~~%3E-JS-red)](https://badge.fury.io/gh/VilyaTanke%2FPractica-JS)
  [![JS-dev](https://img.shields.io/badge/Status-%3C--desarrollo-yellowgreen)](https://badge.fury.io/gh/VilyaTanke%2FPractica-JS)
 
 Bienvenido a mi presentación de JavaScript en donde se realiza un sencillo codigo que ejecutara una copa de football a partir de los cuartos de final. 
