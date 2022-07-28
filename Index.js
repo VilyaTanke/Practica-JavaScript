@@ -54,8 +54,9 @@ console.log('')
 console.log('============================= SEMIFINALES ===============================')
 console.log('')
 
-console.log(`|-- Los Equipos clasificados para las Semifinales son: -|`)
-console.log(semifinalistas)
+console.log(`|-- Los Equipos clasificados para las Semifinales son: -|
+`)
+semifinalistas.forEach(equipos => console.log(`|--> ${equipos}.`));
 
 let finalista = semifinalistas.findIndex(
     (equipo, finalista) => finalista == 0
