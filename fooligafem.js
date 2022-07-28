@@ -4,7 +4,7 @@ import equipos from "./equipos.js";
 export default class playOff {
     constructor(grupo, equipos) {
         this.grupo = grupo
-        this.equipos = equipos  
+        this.equipos = equipos 
     }
     
     playOffinit(equipos){
@@ -22,6 +22,26 @@ export default class playOff {
     getRandomInt(max) {
         return Math.floor(Math.random() * max);
       }
+    
+    
+    // ronda(ronda, equipo1, equipo2){
+    //     var golesA = Math.floor(Math.random() * 10);
+    //     var golesB = Math.floor(Math.random() * 10);
+    //     const semifinalistas = []
+    //     console.log('')
+    //     console.log(`|-${equipo1} : ${golesA} Goles :: ${equipo2} : ${golesB} Goles -|`);
+    //     console.log('')
+    //     if ( golesA > golesB ) {
+    //         console.log(`└======> Gana el Round ${ronda} ${equipo1} con: ${golesA} Goles
+    //         `)
+    //         semifinalistas.push(equipo1);
+    //       } else {
+    //         console.log(`└======> Gana el Round ${ronda} ${equipo2} con: ${golesB} Goles
+    //         `)
+    //         semifinalistas.push(equipo2);    
+    //       }
+    
+    // }
 
 }
 

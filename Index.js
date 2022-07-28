@@ -1,55 +1,40 @@
 import equipos, { equiposA, equiposB, equiposC, equiposD } from "./equipos.js";
 
-import playOff, {  } from "./fooligafem.js";
+import playOff, { } from "./fooligafem.js";
 
 
 const selectChamp = new playOff("A", equiposA);
 
-console.log(`|
-|== Selección del grupo A ==|
-| Campeon:`)
+console.log(`
+|=========== Selección del grupo A ===========|
+|`)
 let champA = selectChamp.playOffinit(equiposA)
-console.log(champA)
-console.log(`|
-| Sub-Campeon:`)
 let subA = selectChamp.playOffinitS(equiposA)
-console.log(subA)
-console.log(`|
-|== Selección del grupo B ==|
-| Campeon:`)
+
+console.log(`|--> Campeon: "${champA}" :: Sub-Campeon: "${subA}"
+|
+|=========== Selección del grupo B ===========|
+| `)
 let champB = selectChamp.playOffinit(equiposB)
-console.log(champB)
-console.log(`|
-| Sub-Campeon:`)
 let subB = selectChamp.playOffinitS(equiposB)
-console.log(subB)
-console.log(`|
-|== Selección del grupo C ==|
-| Campeon:`)
+console.log(`|--> Campeon: "${champB}" :: Sub-Campeon: "${subB}"
+|
+|=========== Selección del grupo C ===========|
+|`)
 let champC = selectChamp.playOffinit(equiposC)
-console.log(champC)
-console.log(`|
-| Sub-Campeon:`)
 let subC = selectChamp.playOffinitS(equiposC)
-console.log(subC)
-console.log(`|
-|== Selección del grupo D ==|
-| Campeon:`)
+console.log(`|--> Campeon: "${champC}" :: Sub-Campeon: "${subC}"
+|
+|=========== Selección del grupo D ===========|
+|`)
 let champD = selectChamp.playOffinit(equiposD)
-console.log(champD)
-console.log(`|
-| Sub-Campeon:`)
 let subD = selectChamp.playOffinitS(equiposD)
-console.log(subD)
-console.log('|')
+console.log(`|--> Campeon: "${champD}" :: Sub-Campeon: "${subD}" 
+|___`)
 
 console.log('')
 console.log('========================== CUARTOS DE FINAL ============================')
 console.log('')
-
-var golesA = selectChamp.getRandomInt(10);
-var golesB = selectChamp.getRandomInt(10);
-
 
   console.log(`|Round 1 - ${champA} - VS - ${subB} -|`)
   console.log(`|Round 2 - ${champB} - VS - ${subC} -|`)
@@ -58,64 +43,30 @@ var golesB = selectChamp.getRandomInt(10);
 
 var semifinalistas = []
 
-  console.log('')
-  console.log(`|-${champA} : ${golesA} Goles :: ${subB} : ${golesB} Goles -|`);
-  console.log('')
+function ronda(ronda, equipo1, equipo2){
+    var golesA = selectChamp.getRandomInt(10);
+    var golesB = selectChamp.getRandomInt(10);
+    console.log('')
+    console.log(`|-${equipo1} : ${golesA} Goles :: ${equipo2} : ${golesB} Goles -|`);
+    console.log('')
+    if ( golesA > golesB ) {
+        console.log(`└======> Gana el Round ${ronda} ${equipo1} con: ${golesA} Goles
+        `)
+        semifinalistas.push(equipo1);
+      } else {
+        console.log(`└======> Gana el Round ${ronda} ${equipo2} con: ${golesB} Goles
+        `)
+        semifinalistas.push(equipo2);    
+      }
 
-  if ( golesA > golesB ) {
-    console.log(`└======> Gana el Round 1 ${champA} con: ${golesA} Goles`)
-    semifinalistas.push(champA);
-  } else {
-    console.log(`└======> Gana el Round 1 ${subB} con: ${golesB} Goles`)
-    semifinalistas.push(subB);    
-  }
-console.log('')
-var golesA = selectChamp.getRandomInt(10);
-var golesB = selectChamp.getRandomInt(10);
-console.log('')
-
-
-  console.log(`|- ${champB} : ${golesA} Goles :: ${subC} : ${golesB} Goles -|`);
-  console.log('')
-
-  if ( golesA > golesB ) {
-    console.log(`└======> Gana el Round 2 ${champB} con: ${golesA} Goles`)
-    semifinalistas.push(champB);
-  } else {
-    console.log(`└======> Gana el Round 2 ${subC} con: ${golesB} Goles`)
-    semifinalistas.push(subC);  
-  }
-console.log('')
-var golesA = selectChamp.getRandomInt(10);
-var golesB = selectChamp.getRandomInt(10);
-console.log('')
-
-  console.log(`|- ${champC} : ${golesA} Goles :: ${subD} : ${golesB} Goles -|`);
-  console.log('')
-
-  if ( golesA > golesB ) {
-    console.log(`└======> Gana el Round 3 ${champC} con: ${golesA} Goles`)
-    semifinalistas.push(champC);    
-  } else {
-    console.log(`└======> Gana el Round 3 ${subD} con: ${golesB} Goles`)
-    semifinalistas.push(subD);  
-  }
-console.log('')
-var golesA = selectChamp.getRandomInt(10);
-var golesB = selectChamp.getRandomInt(10);
-console.log('')
-
-
-  console.log(`|- ${champD}  apunta: ${golesA} Goles :: ${subA} : ${golesB} Goles -|`);
-  console.log('')
-
-  if ( golesA > golesB ) {
-    console.log(`└======> Gana el Round 4 ${champD} con: ${golesA} Goles`)
-    semifinalistas.push(champD);
-  } else {
-    console.log(`└======> Gana el Round 4 ${subA} con: ${golesB} Goles`)
-    semifinalistas.push(subA);      
 }
+    // const playS = new playOff();
+
+    ronda(1, champA, subB);
+    ronda(2, champB, subC);
+    ronda(3, champC, subD);
+    ronda(4, champD, subA);
+
 console.log('')
 console.log('============================= SEMIFINALES ===============================')
 console.log('')
@@ -127,71 +78,68 @@ let finalista = semifinalistas.findIndex(
     (equipo, finalista) => finalista == 0
 );
 let fin1 = semifinalistas[finalista]
-// console.log(semifinalistas[finalista]);
 
 let finalista2 = semifinalistas.findIndex(
     (equipo, finalista2) => finalista2 == 1
 );
 let fin2 = semifinalistas[finalista2]
-// console.log(semifinalistas[finalista2]);
 
 let finalista3 = semifinalistas.findIndex(
     (equipo, finalista3) => finalista3 == 2
 );
 let fin3 = semifinalistas[finalista3]
-// console.log(semifinalistas[finalista3]);
 
 let finalista4 = semifinalistas.findIndex(
     (equipo, finalista4) => finalista4 == 3
 );
 let fin4 = semifinalistas[finalista4]
-// console.log(semifinalistas[finalista4]);
 
 
 console.log('')
-var golesA = selectChamp.getRandomInt(10);
-var golesB = selectChamp.getRandomInt(10);
+const sCamp = []
+const perd = []
+function rondaSemi(ronda, equipo1, equipo2){
+    var golesA = selectChamp.getRandomInt(10);
+    var golesB = selectChamp.getRandomInt(10);
+    console.log('')
+    console.log(`|-${equipo1} : ${golesA} Goles :: ${equipo2} : ${golesB} Goles -|`);
+    console.log('')
+    if ( golesA > golesB ) {
+        console.log(`└======> Gana el Round ${ronda} ${equipo1} con: ${golesA} Goles
+        `)
+        sCamp.push(equipo1);
+        perd.push(equipo2);
+      } else {
+        console.log(`└======> Gana el Round ${ronda} ${equipo2} con: ${golesB} Goles
+        `)
+        sCamp.push(equipo2);
+        perd.push(equipo1);
+      }
+
+}
 
 
   console.log(`|Round 1 - ${fin1} - VS - ${fin3} -|`)
   console.log(`|Round 2 - ${fin2} - VS - ${fin4} -|`)
 
-var semifinalistas = []
+    rondaSemi(1, fin1, fin3);
+    rondaSemi(2, fin2, fin4);
 
-  console.log('')
-  console.log(`|-${fin1} : ${golesA} Goles :: ${fin3} : ${golesB} Goles -|`);
-  console.log('')
-
-  if ( golesA > golesB ) {
-    console.log(`└======> Gana el Round 1 ${fin1} con: ${golesA} Goles`)
-    var sCamp1 = fin1
-    var perd1 = fin3
-  } else {
-    console.log(`└======> Gana el Round 1 ${fin3} con: ${golesB} Goles`)
-    var sCamp1 = fin3
-    var perd1 = fin1
-  }
-console.log('')
-var golesA = selectChamp.getRandomInt(10);
-var golesB = selectChamp.getRandomInt(10);
-console.log('')
-
-
-  console.log(`|- ${fin2} : ${golesA} Goles :: ${fin4} : ${golesB} Goles -|`);
-  console.log('')
-
-  if ( golesA > golesB ) {
-    console.log(`└======> Gana el Round 2 ${fin2} con: ${golesA} Goles`)
-    var sCamp2 = fin2
-    var perd2 = fin4
-  } else {
-    console.log(`└======> Gana el Round 2 ${fin4} con: ${golesB} Goles`)
-    var sCamp2 = fin4
-    var perd2 = fin2
-  }
+    
 console.log('')
 console.log('')
 console.log('======================= TERCER Y CUARTO PUESTO =========================')
+
+let perd1 = perd.findIndex(
+    (equipo, perd1) => perd1 == 0
+);
+perd1 = perd[perd1]
+
+let perd2 = perd.findIndex(
+    (equipo, perd2) => perd2 == 1
+);
+perd2 = perd[perd2]
+
 console.log('')
 console.log(`Pasan al tercer y cuarto lugar "${perd1}" vs "${perd2}"`)
 console.log('')
@@ -214,6 +162,16 @@ console.log('')
 console.log('')
 console.log('================================ FINAL =================================')
 console.log('')
+
+let sCamp1 = sCamp.findIndex(
+    (equipo, sCamp1) => sCamp1 == 0
+);
+sCamp1 = sCamp[sCamp1]
+
+let sCamp2 = sCamp.findIndex(
+    (equipo, sCamp2) => sCamp2 == 1
+);
+sCamp2 = sCamp[sCamp2]
 
 console.log(`Pasan a la final "${sCamp1}" vs "${sCamp2}"`)
 console.log('')
