@@ -18,27 +18,36 @@ console.log('')
 console.log(`
 |========= Equipo A ==============|
 |   Los participantes son:        |`)
-console.log(equiposA)
+console.table(equiposA)
 
 console.log(`
 |========= Equipo B ==============|
 |   Los participantes son:        |`)
 console.table(equiposB)
-console.assert(equiposB)
 
 console.log(`
-|========================= Equipo C ===================================|
-|                  Los participantes son:                              |
-|                                                                      |
-|        ${equiposC}         |
-|======================================================================|`)
+|========= Equipo C ==============|
+|   Los participantes son:        |`)
+console.table(equiposC)
 
 console.log(`
-|========================= Equipo D ===================================|
-|                  Los participantes son:                              |
-|                                                                      |
-|  ${equiposD} |
-|======================================================================|`)
+|========= Equipo D ==============|
+|   Los participantes son:        |`)
+console.table(equiposD)
+
+// console.log(`
+// |========================= Equipo C ===================================|
+// |                  Los participantes son:                              |
+// |                                                                      |
+// |        ${equiposC}         |
+// |======================================================================|`)
+
+// console.log(`
+// |========================= Equipo D ===================================|
+// |                  Los participantes son:                              |
+// |                                                                      |
+// |  ${equiposD} |
+// |======================================================================|`)
 
 
 

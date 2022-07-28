@@ -9,16 +9,13 @@ export default class playOff {
     
     playOffinit(equipos){
         const ganador = Math.floor(Math.random() * equipos.length);
-        // console.log(` ${equipos[ganador]} `)
-        var granD = equipos[ganador]
         var elegido = equipos[ganador]
-        equipos.splice(elegido, 1)
-        return granD
+        equipos.splice(ganador, 1)
+        return elegido
     }
 
     playOffinitS(equipos){
         const ganador2 = Math.floor(Math.random() * equipos.length);
-        // console.log(equipos[ganador2])
         return equipos[ganador2]
     }
 
