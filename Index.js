@@ -6,26 +6,26 @@ import playOff, { } from "./fooligafem.js";
 const selectChamp = new playOff("A", equiposA);
 
 console.log(`
-|=========== Selección del grupo A ===========|
+|=========== Selección del Grupo A ===========|
 |`)
 let champA = selectChamp.playOffinit(equiposA)
 let subA = selectChamp.playOffinitS(equiposA)
 
 console.log(`|--> Campeon: "${champA}" :: Sub-Campeon: "${subA}"
 |
-|=========== Selección del grupo B ===========|
+|=========== Selección del Grupo B ===========|
 | `)
 let champB = selectChamp.playOffinit(equiposB)
 let subB = selectChamp.playOffinitS(equiposB)
 console.log(`|--> Campeon: "${champB}" :: Sub-Campeon: "${subB}"
 |
-|=========== Selección del grupo C ===========|
+|=========== Selección del Grupo C ===========|
 |`)
 let champC = selectChamp.playOffinit(equiposC)
 let subC = selectChamp.playOffinitS(equiposC)
 console.log(`|--> Campeon: "${champC}" :: Sub-Campeon: "${subC}"
 |
-|=========== Selección del grupo D ===========|
+|=========== Selección del Grupo D ===========|
 |`)
 let champD = selectChamp.playOffinit(equiposD)
 let subD = selectChamp.playOffinitS(equiposD)
@@ -169,14 +169,14 @@ console.log('')
 
   if ( golesA > golesB ) {
     console.log('')
-    console.log(`    =============================================================
-    ${sCamp1} Campeona de la EURO WOMEN'S CUP
-    =============================================================`)
+    console.log(`     =============================================================
+          <|${sCamp1}|> Campeona de la EURO WOMEN'S CUP
+     =============================================================`)
   } else {
     console.log('')
-    console.log(`    =============================================================
-    ${sCamp2} Campeona de la EURO WOMEN'S CUP
-    =============================================================`)
+    console.log(`     =============================================================
+      <|${sCamp2}|> Campeona de la EURO WOMEN'S CUP
+     =============================================================`)
     
   }
 console.log('')

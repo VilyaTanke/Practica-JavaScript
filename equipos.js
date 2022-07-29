@@ -14,28 +14,28 @@ console.log(`
 console.log('')
 
 console.log(`
-|=========[ Equipo A ]========|
+|=========[ Grupo A ]========|
 |   Los participantes son:  |
 |                           |`)
 
 equiposA.forEach(equipos => console.log(`|--> ${equipos}.`));
 
 console.log(`
-|=========[ Equipo B ]========|
+|=========[ Grupo B ]========|
 |   Los participantes son:  |
 |                           |`)
 equiposB.forEach(equipos => console.log(`|--> ${equipos}.`));
 
 
 console.log(`
-|=========[ Equipo C ]========|
+|=========[ Grupo C ]========|
 |   Los participantes son:  |
 |                           |`)
 equiposC.forEach(equipos => console.log(`|--> ${equipos}.`));
 
 
 console.log(`
-|=========[ Equipo D ]========|
+|=========[ Grupo D ]========|
 |   Los participantes son:  |
 |                           |`)
 equiposD.forEach(equipos => console.log(`|--> ${equipos}.`));
