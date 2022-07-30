@@ -28,14 +28,14 @@ export default class playOff {
         var golesA = Math.floor(Math.random() * 10);
         var golesB = Math.floor(Math.random() * 10);
         console.log('')
-        console.log(`|-${equipo1} : ${golesA} Goles :: ${equipo2} : ${golesB} Goles -|`);
+        console.log(`|-"${equipo1}" : ${golesA} Goles :: "${equipo2}" : ${golesB} Goles -|`);
         console.log('')
         if ( golesA > golesB ) {
-            console.log(`└======> Gana el Round ${ronda} ${equipo1} con: ${golesA} Goles
+            console.log(`└======> Gana el Round ${ronda} "${equipo1}" con: ${golesA} Goles
             `)
             semifinalistas.push(equipo1);
           } else {
-            console.log(`└======> Gana el Round ${ronda} ${equipo2} con: ${golesB} Goles
+            console.log(`└======> Gana el Round ${ronda} "${equipo2}" con: ${golesB} Goles
             `)
             semifinalistas.push(equipo2);    
           }

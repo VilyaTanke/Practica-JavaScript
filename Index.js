@@ -86,15 +86,15 @@ function rondaSemi(ronda, equipo1, equipo2){
     var golesA = selectChamp.getRandomInt(10);
     var golesB = selectChamp.getRandomInt(10);
     console.log('')
-    console.log(`|-${equipo1} : ${golesA} Goles :: ${equipo2} : ${golesB} Goles -|`);
+    console.log(`|-"${equipo1}" : ${golesA} Goles :: "${equipo2}" : ${golesB} Goles -|`);
     console.log('')
     if ( golesA > golesB ) {
-        console.log(`└======> Gana el Round ${ronda} ${equipo1} con: ${golesA} Goles
+        console.log(`└======> Gana el Round ${ronda} "${equipo1}" con: ${golesA} Goles
         `)
         sCamp.push(equipo1);
         perd.push(equipo2);
       } else {
-        console.log(`└======> Gana el Round ${ronda} ${equipo2} con: ${golesB} Goles
+        console.log(`└======> Gana el Round ${ronda} "${equipo2}" con: ${golesB} Goles
         `)
         sCamp.push(equipo2);
         perd.push(equipo1);
@@ -132,14 +132,14 @@ var golesB = selectChamp.getRandomInt(10);
 console.log('')
 
 
-  console.log(`|- ${perd1} : ${golesA} Goles :: ${perd2} : ${golesB} Goles -|`);
+  console.log(`|- "${perd1}" : ${golesA} Goles :: "${perd2}" : ${golesB} Goles -|`);
   console.log('')
 
   if ( golesA > golesB ) {
-    console.log(`└======> Gana ${perd1} con: ${golesA} Goles`)
+    console.log(`└======>| Gana "${perd1}" con: ${golesA} Goles`)
     
   } else {
-    console.log(`└======> Gana ${perd2} con: ${golesB} Goles`)
+    console.log(`└======> Gana "${perd2}" con: ${golesB} Goles`)
     
   }
 console.log('')
@@ -164,7 +164,7 @@ var golesB = selectChamp.getRandomInt(10);
 console.log('')
 
 
-  console.log(`|- ${sCamp1} : ${golesA} Goles :: ${sCamp2} : ${golesB} Goles -|`);
+  console.log(`|- "${sCamp1}" : ${golesA} Goles :: "${sCamp2}" : ${golesB} Goles -|`);
   console.log('')
 
   if ( golesA > golesB ) {
